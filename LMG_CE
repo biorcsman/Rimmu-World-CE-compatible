@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+	<!-- ===================== LMG ========================= -->
+
+	<ThingDef ParentName="RimmuNationBaseMakeableGun">
+		<defName>Gun_DP28LMG</defName>
+		<label>DP-28 RMW</label>
+		<description>A light machine gun.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/LMG/DP28</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>InteractRifle</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>GasOperation</researchPrerequisite>
+    </recipeMaker>
+		<statBases>
+			<WorkToMake>27500</WorkToMake>
+      <SightsEfficiency>0.50</SightsEfficiency>
+      <ShotSpread>0.06</ShotSpread>
+      <SwayFactor>1.51</SwayFactor>
+      <Bulk>14.05</Bulk>
+      <Mass>10.50</Mass>
+      <RangedWeapon_Cooldown>0.56</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>75</Steel>
+			<Component>4</Component>
+		</costList>
+		<verbs>
+			<li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>1.24</recoilAmount>
+				<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_762x51mmNATO_FMJ</defaultProjectile>
+				<warmupTime>1.2</warmupTime>
+				<range>70</range>
+				<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+				<burstShotCount>8</burstShotCount>
+				<soundCast>RNShotL86LMG</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<recoilPattern>Mounted</recoilPattern>
+			</li>
+		</verbs>
+		<comps>
+			<li Class="CombatExtended.CompProperties_AmmoUser">
+				<magazineSize>47</magazineSize>
+        <reloadTime>6.7</reloadTime>
+        <ammoSet>AmmoSet_762x51mmNATO</ammoSet>
+			</li>
+			<li Class="CombatExtended.CompProperties_FireModes">
+				<aiUseBurstMode>FALSE</aiUseBurstMode>
+				<aiAimMode>SuppressFire</aiAimMode>
+				<aimedBurstShotCount>5</aimedBurstShotCount>
+			</li>
+		</comps>
+		
+		<weaponTags>
+			<li>EliteGun</li>
+		</weaponTags>
+    <tools>
+			<li Class="CombatExtended.ToolCE">
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>1.8</cooldownTime>
+				<commonality>1.5</commonality>
+				<armorPenetration>0.11</armorPenetration>
+				<linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+			</li>
+			<li Class="CombatExtended.ToolCE">
+				<id>barrelblunt</id>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>1.9</cooldownTime>
+				<armorPenetration>0.118</armorPenetration>
+				<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+			</li>
+			<li Class="CombatExtended.ToolCE">
+				<id>barrelpoke</id>
+				<label>barrel</label>
+				<capacities>
+					<li>Poke</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>1.9</cooldownTime>
+				<armorPenetration>0.086</armorPenetration>
+				<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+			</li>
+    </tools>
+  </ThingDef>
+  
+  	<!-- ===================== M60 ========================= -->
+
+		<ThingDef ParentName="RimmuNationBaseMakeableGun">
+			<defName>Gun_DPM60LMG</defName>
+			<label>M60 RMW</label>
+			<description>A light machine gun.</description>
+			<graphicData>
+				<texPath>Things/Item/Equipment/LMG/M60</texPath>
+				<graphicClass>Graphic_Single</graphicClass>
+			</graphicData>
+			<soundInteract>InteractRifle</soundInteract>
+	    <recipeMaker>
+	      <researchPrerequisite>GasOperation</researchPrerequisite>
+	    </recipeMaker>
+			<statBases>
+				<WorkToMake>27500</WorkToMake>
+				<SightsEfficiency>1</SightsEfficiency>
+				<ShotSpread>0.06</ShotSpread>
+				<SwayFactor>1.51</SwayFactor>
+				<Bulk>14.05</Bulk>
+				<Mass>10.50</Mass>
+				<RangedWeapon_Cooldown>0.56</RangedWeapon_Cooldown>
+			</statBases>
+			<costList>
+				<Steel>75</Steel>
+				<Component>4</Component>
+			</costList>
+			<verbs>
+				<li Class="CombatExtended.VerbPropertiesCE">
+					<recoilAmount>1.23</recoilAmount>
+					<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+					<hasStandardCommand>true</hasStandardCommand>
+					<defaultProjectile>Bullet_762x51mmNATO_FMJ</defaultProjectile>
+					<warmupTime>1.2</warmupTime>
+					<range>75</range>
+					<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+					<burstShotCount>8</burstShotCount>
+					<soundCast>RNShotM60LMG</soundCast>
+					<soundCastTail>GunTail_Medium</soundCastTail>
+					<muzzleFlashScale>9</muzzleFlashScale>
+					<targetParams>
+						<canTargetLocations>true</canTargetLocations>
+					</targetParams>
+					<recoilPattern>Mounted</recoilPattern>
+				</li>
+			</verbs>
+			<comps>
+				<li Class="CombatExtended.CompProperties_AmmoUser">
+					<magazineSize>100</magazineSize>
+					<reloadTime>7.8</reloadTime>
+					<ammoSet>AmmoSet_762x51mmNATO</ammoSet>
+				</li>
+				<li Class="CombatExtended.CompProperties_FireModes">
+					<aiUseBurstMode>FALSE</aiUseBurstMode>
+					<aiAimMode>SuppressFire</aiAimMode>
+					<aimedBurstShotCount>5</aimedBurstShotCount>
+				</li>
+			</comps>
+			
+				<equippedAngleOffset>40</equippedAngleOffset>
+			
+			<weaponTags>
+				<li>EliteGun</li>
+			</weaponTags>
+	    <tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>stock</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>9</power>
+					<cooldownTime>1.8</cooldownTime>
+					<commonality>1.5</commonality>
+					<armorPenetration>0.11</armorPenetration>
+					<linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<id>barrelblunt</id>
+					<label>barrel</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>10</power>
+					<cooldownTime>1.9</cooldownTime>
+					<armorPenetration>0.118</armorPenetration>
+					<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<id>barrelpoke</id>
+					<label>barrel</label>
+					<capacities>
+						<li>Poke</li>
+					</capacities>
+					<power>10</power>
+					<cooldownTime>1.9</cooldownTime>
+					<armorPenetration>0.086</armorPenetration>
+					<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+	      </li>
+	    </tools>
+	  </ThingDef>
+  
+    	<!-- ===================== RPK74 ========================= -->
+
+	<ThingDef ParentName="RimmuNationBaseMakeableGun">
+		<defName>Gun_DPRPKLMG</defName>
+		<label>RPK-74 RMW</label>
+		<description>A light machine gun.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/LMG/RPK74</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>InteractRifle</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>GasOperation</researchPrerequisite>
+    </recipeMaker>
+		<statBases>
+			<WorkToMake>34000</WorkToMake>
+			<ShotSpread>0.11</ShotSpread>
+			<Mass>8.5</Mass>
+			<SwayFactor>1.21</SwayFactor>
+			<SightsEfficiency>1</SightsEfficiency>
+			<RangedWeapon_Cooldown>0.7</RangedWeapon_Cooldown>
+      <Bulk>10.21</Bulk>
+		</statBases>
+		<costList>
+			<Steel>75</Steel>
+			<Component>4</Component>
+		</costList>
+		<verbs>
+			<li Class="CombatExtended.VerbPropertiesCE">
+				<recoilAmount>1.2</recoilAmount>
+				<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_545x39mmSoviet_FMJ</defaultProjectile>
+				<warmupTime>1.1</warmupTime>
+				<range>72</range>
+				<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+				<burstShotCount>12</burstShotCount>
+				<soundCast>RNShotRPK</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<recoilPattern>Mounted</recoilPattern>
+			</li>
+		</verbs>
+		<comps>
+			<li Class="CombatExtended.CompProperties_AmmoUser">
+				<magazineSize>60</magazineSize>
+				<reloadTime>4</reloadTime>
+				<ammoSet>AmmoSet_545x39mmSoviet</ammoSet>
+			</li>
+		</comps>
+		
+			<equippedAngleOffset>40</equippedAngleOffset>
+		
+		<weaponTags>
+			<li>EliteGun</li>
+		</weaponTags>
+    <tools>
+			<li Class="CombatExtended.ToolCE">
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>1.8</cooldownTime>
+				<commonality>1.5</commonality>
+				<armorPenetration>0.11</armorPenetration>
+				<linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+			</li>
+			<li Class="CombatExtended.ToolCE">
+				<id>barrelblunt</id>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>1.9</cooldownTime>
+				<armorPenetration>0.118</armorPenetration>
+				<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+			</li>
+			<li Class="CombatExtended.ToolCE">
+				<id>barrelpoke</id>
+				<label>barrel</label>
+				<capacities>
+					<li>Poke</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>1.9</cooldownTime>
+				<armorPenetration>0.086</armorPenetration>
+				<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  	<!-- ===================== M240 ========================= -->
+
+	<ThingDef ParentName="RimmuNationBaseMakeableGun">
+		<defName>Gun_M240BravoLMG</defName>
+		<label>M240B RMW</label>
+		<description>A light machine gun.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/LMG/M240Bravo</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>InteractRifle</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>GasOperation</researchPrerequisite>
+    </recipeMaker>
+		<statBases>
+			<WorkToMake>41000</WorkToMake>
+			<SightsEfficiency>1</SightsEfficiency>
+			<ShotSpread>0.04</ShotSpread>
+			<SwayFactor>1.34</SwayFactor>
+			<Bulk>12.42</Bulk>
+			<Mass>10</Mass>
+			<RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>75</Steel>
+			<Component>4</Component>
+		</costList>
+		<verbs>
+			<li Class="CombatExtended.VerbPropertiesCE">
+				<recoilAmount>1.2</recoilAmount>
+				<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_762x51mmNATO_FMJ</defaultProjectile>
+				<warmupTime>1</warmupTime>
+				<range>73</range>
+				<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+				<burstShotCount>14</burstShotCount>
+				<soundCast>RNShotM240B</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<recoilPattern>Mounted</recoilPattern>
+			</li>
+		</verbs>
+		<comps>
+			<li Class="CombatExtended.CompProperties_AmmoUser">
+				<magazineSize>100</magazineSize>
+				<reloadTime>6.5</reloadTime>
+				<ammoSet>AmmoSet_762x51mmNATO</ammoSet>
+			</li>
+			<li Class="CombatExtended.CompProperties_FireModes">
+				<aiUseBurstMode>FALSE</aiUseBurstMode>
+				<aiAimMode>SuppressFire</aiAimMode>
+				<aimedBurstShotCount>5</aimedBurstShotCount>
+			</li>
+		</comps>
+		<weaponTags>
+			<li>RNEliteGun</li>
+		</weaponTags>
+    <tools>
+			<li Class="CombatExtended.ToolCE">
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>1.8</cooldownTime>
+				<commonality>1.5</commonality>
+				<armorPenetration>0.11</armorPenetration>
+				<linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+			</li>
+			<li Class="CombatExtended.ToolCE">
+				<id>barrelblunt</id>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>1.9</cooldownTime>
+				<armorPenetration>0.118</armorPenetration>
+				<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+			</li>
+			<li Class="CombatExtended.ToolCE">
+				<id>barrelpoke</id>
+				<label>barrel</label>
+				<capacities>
+					<li>Poke</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>1.9</cooldownTime>
+				<armorPenetration>0.086</armorPenetration>
+				<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+      </li>
+    </tools>
+  </ThingDef>
+  
+    	<!-- ===================== Minimi ========================= -->
+
+	<ThingDef ParentName="RimmuNationBaseMakeableGun">
+		<defName>Gun_FNMinimiLMG</defName>
+		<label>FN minimi FMW</label>
+		<description>A light machine gun.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/LMG/FN_Minimi</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>InteractRifle</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>GasOperation</researchPrerequisite>
+    </recipeMaker>
+		<statBases>
+			<WorkToMake>34000</WorkToMake>
+			<SightsEfficiency>1</SightsEfficiency>
+			<Bulk>13.35</Bulk>
+			<Mass>8.2</Mass>
+			<ShotSpread>0.06</ShotSpread>
+			<SwayFactor>1.26</SwayFactor>
+			<RangedWeapon_Cooldown>0.55</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>75</Steel>
+			<Component>4</Component>
+		</costList>
+		<verbs>
+			<li Class="CombatExtended.VerbPropertiesCE">
+				<recoilAmount>0.92</recoilAmount>
+				<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_556x45mmNATO_FMJ</defaultProjectile>
+				<warmupTime>1.1</warmupTime>
+				<range>75</range>
+				<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+				<burstShotCount>6</burstShotCount>
+				<soundCast>RNShotL86LMG</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<recoilPattern>Mounted</recoilPattern>
+			</li>
+		</verbs>
+		<comps>
+			<li Class="CombatExtended.CompProperties_AmmoUser">
+				<magazineSize>200</magazineSize>
+				<reloadTime>7.8</reloadTime>
+				<ammoSet>AmmoSet_556x45mmNATO</ammoSet>
+			</li>
+			<li Class="CombatExtended.CompProperties_FireModes">
+				<aiUseBurstMode>FALSE</aiUseBurstMode>
+				<aiAimMode>SuppressFire</aiAimMode>
+				<aimedBurstShotCount>5</aimedBurstShotCount>
+			</li>
+		</comps>
+		<weaponTags>
+			<li>RNEliteGun</li>
+		</weaponTags>
+    <tools>
+			<li Class="CombatExtended.ToolCE">
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>1.8</cooldownTime>
+				<commonality>1.5</commonality>
+				<armorPenetration>0.11</armorPenetration>
+				<linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+			</li>
+			<li Class="CombatExtended.ToolCE">
+				<id>barrelblunt</id>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>1.9</cooldownTime>
+				<armorPenetration>0.118</armorPenetration>
+				<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+			</li>
+			<li Class="CombatExtended.ToolCE">
+				<id>barrelpoke</id>
+				<label>barrel</label>
+				<capacities>
+					<li>Poke</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>1.9</cooldownTime>
+				<armorPenetration>0.086</armorPenetration>
+				<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+      </li>
+    </tools>
+  </ThingDef>
+  
+
+
+  <!-- ======================= Minigun ======================= -->
+	
+  <ThingDef ParentName="RimmuNationBaseMakeableGun">
+    <defName>Gun_M61VulcanMinigun</defName>
+    <label>M61 vulcan FMW</label>
+    <description>A multi-barrel machine gun with an extremely high rate of fire.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/LMG/VulcanMinigun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <WorkToMake>100000</WorkToMake>
+			<SightsEfficiency>0.7</SightsEfficiency>
+			<ShotSpread>0.2</ShotSpread>
+			<SwayFactor>2.54</SwayFactor>
+			<Bulk>16.55</Bulk>
+      <Mass>15</Mass>
+      <RangedWeapon_Cooldown>1.66</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>160</Steel>
+      <Component>20</Component>
+    </costList>
+		<recipeMaker>
+      <researchPrerequisite>MultibarrelWeapons</researchPrerequisite>
+    </recipeMaker>
+    <techLevel>Industrial</techLevel>
+    <weaponTags>
+      <li>GunHeavy</li>
+    </weaponTags>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.25</MoveSpeed>
+    </equippedStatOffsets>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+				<recoilAmount>1.6</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_762x51mmNATO_FMJ</defaultProjectile>
+        <warmupTime>1.7</warmupTime>
+        <range>75</range>
+        <burstShotCount>30</burstShotCount>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <soundCast>RNShotVulcan</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+		<comps>
+			<li Class="CombatExtended.CompProperties_AmmoUser">
+				<magazineSize>400</magazineSize>
+				<reloadTime>4</reloadTime>
+				<ammoSet>AmmoSet_762x51mmNATO</ammoSet>
+			</li>
+			<li Class="CombatExtended.CompProperties_FireModes">
+				<aimedBurstShotCount>7</aimedBurstShotCount>
+				<aiUseBurstMode>FALSE</aiUseBurstMode>
+				<aiAimMode>SuppressFire</aiAimMode>
+			</li>
+		</comps>
+    <tools>
+			<li Class="CombatExtended.ToolCE">
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>1.8</cooldownTime>
+				<commonality>1.5</commonality>
+				<armorPenetration>0.11</armorPenetration>
+				<linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+			</li>
+			<li Class="CombatExtended.ToolCE">
+				<id>barrelblunt</id>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>1.9</cooldownTime>
+				<armorPenetration>0.118</armorPenetration>
+				<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+			</li>
+			<li Class="CombatExtended.ToolCE">
+				<id>barrelpoke</id>
+				<label>barrel</label>
+				<capacities>
+					<li>Poke</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>1.9</cooldownTime>
+				<armorPenetration>0.086</armorPenetration>
+				<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+      </li>
+    </tools>
+  </ThingDef>
+
+</Defs>
